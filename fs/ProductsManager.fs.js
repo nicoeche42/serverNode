@@ -34,7 +34,7 @@ class ProductManager {
       } else {
         let products = await fs.promises.readFile(this.path, "utf-8");
         products = JSON.parse(products);
-        users.push(product);
+        products.push(product);
         console.log("Producto creado");
         products = JSON.stringify(products, null, 2);
         await fs.promises.writeFile(this.path, products);
@@ -77,15 +77,14 @@ class ProductManager {
       if (!id) {
         throw new Error("Id de producto inexistente");
       } else {
-        await fs.promises.writeFile(filtered);
-        console.log(id + "eliminado");
+        await fs.promises.writeFile(this.path, JSON.stringify(filtered, null, 2));
+        console.log(id + " eliminado");
       }
     } catch (error) {
       console.log(error);
     }
   }
 }
-
 async function test() {
   const gestorDeProductos = new ProductManager();
 
