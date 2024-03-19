@@ -1,0 +1,82 @@
+[
+  {
+    "id": "3977dda093484052f640a1d6",
+    "title": "remera",
+    "photo": "remera.jpg",
+    "category": "indumentaria",
+    "price": 50,
+    "stock": 200
+  },
+  {
+    "id": "3b34169efa1dd42a03b10aa8",
+    "title": "zapatilla",
+    "photo": "zapatilla.jpg",
+    "category": "calzado",
+    "price": 300,
+    "stock": 50
+  },
+  {
+    "id": "3f85dd3795d4c21d16b0d761",
+    "title": "buzo",
+    "photo": "buzo.jpg",
+    "category": "indumentaria",
+    "price": 200,
+    "stock": 100
+  },
+  {
+    "id": "10f346b5222d238e15d1fe1a",
+    "title": "zapato",
+    "photo": "zapato.jpg",
+    "category": "calzado",
+    "price": 250,
+    "stock": 20
+  },
+  {
+    "id": "c74761b61b740379e3800427",
+    "title": "pantalon",
+    "photo": "pantalon.jpg",
+    "category": "indumentaria",
+    "price": 150,
+    "stock": 40
+  },
+  {
+    "id": "a3d46348c443cb533872e14a",
+    "title": "camisa",
+    "photo": "camisa.jpg",
+    "category": "indumentaria",
+    "price": 100,
+    "stock": 100
+  },
+  {
+    "id": "89ebd73b4f6584a54a195f1e",
+    "title": "ojotas",
+    "photo": "ojotas.jpg",
+    "category": "calzado",
+    "price": 50,
+    "stock": 200
+  },
+  {
+    "id": "e69fcb515a012903d2c4deca",
+    "title": "gorra",
+    "photo": "gorra.jpg",
+    "category": "accesorios",
+    "price": 20,
+    "stock": 100
+  },
+  {
+    "id": "f1694fa0f20f81fdfcb81c6c",
+    "title": "lentes",
+    "photo": "lentes.jpg",
+    "category": "accesorios",
+    "price": 30,
+    "stock": 80
+  },
+  {
+    "id": "b10a8d1e1e760f76ad1e6355",
+    "title": "medias",
+    "photo": "medias.jpg",
+    "category": "indumentaria",
+    "price": 15,
+    "stock": 40
+  }
+]
