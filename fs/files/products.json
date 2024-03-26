@@ -1,0 +1,136 @@
+[
+  {
+    "id": "3977dda093484052f640a1d6",
+    "title": "remera",
+    "photo": "remera.jpg",
+    "category": "indumentaria",
+    "price": 50,
+    "stock": 200
+  },
+  {
+    "id": "3b34169efa1dd42a03b10aa8",
+    "title": "zapatilla",
+    "photo": "zapatilla.jpg",
+    "category": "calzado",
+    "price": 300,
+    "stock": 50
+  },
+  {
+    "id": "3f85dd3795d4c21d16b0d761",
+    "title": "buzo",
+    "photo": "buzo.jpg",
+    "category": "indumentaria",
+    "price": 200,
+    "stock": 100
+  },
+  {
+    "id": "10f346b5222d238e15d1fe1a",
+    "title": "zapato",
+    "photo": "zapato.jpg",
+    "category": "calzado",
+    "price": 250,
+    "stock": 20
+  },
+  {
+    "id": "c74761b61b740379e3800427",
+    "title": "pantalon",
+    "photo": "pantalon.jpg",
+    "category": "indumentaria",
+    "price": 150,
+    "stock": 40
+  },
+  {
+    "id": "a3d46348c443cb533872e14a",
+    "title": "camisa",
+    "photo": "camisa.jpg",
+    "category": "indumentaria",
+    "price": 100,
+    "stock": 100
+  },
+  {
+    "id": "89ebd73b4f6584a54a195f1e",
+    "title": "ojotas",
+    "photo": "ojotas.jpg",
+    "category": "calzado",
+    "price": 50,
+    "stock": 200
+  },
+  {
+    "id": "e69fcb515a012903d2c4deca",
+    "title": "gorra",
+    "photo": "gorra.jpg",
+    "category": "accesorios",
+    "price": 20,
+    "stock": 100
+  },
+  {
+    "id": "f1694fa0f20f81fdfcb81c6c",
+    "title": "lentes",
+    "photo": "lentes.jpg",
+    "category": "accesorios",
+    "price": 30,
+    "stock": 80
+  },
+  {
+    "id": "b10a8d1e1e760f76ad1e6355",
+    "title": "medias",
+    "photo": "medias.jpg",
+    "category": "indumentaria",
+    "price": 15,
+    "stock": 40
+  },
+  {
+    "id": "16a8da015e49a09633e3e792",
+    "title": "corbata",
+    "category": "accesorios",
+    "date": "2024-03-26T01:18:25.937Z"
+  },
+  {
+    "id": "7580973cd21a86ac54302492",
+    "title": "musculosa",
+    "category": "indumentaria",
+    "date": "2024-03-26T01:19:37.500Z"
+  },
+  {
+    "id": "fd61a13a6508406c6786c3d3",
+    "title": "gorra",
+    "category": "accesorios",
+    "date": "2024-03-26T01:19:38.092Z"
+  },
+  {
+    "id": "112a5d812d3fba0a9484dc93",
+    "title": "botas",
+    "category": "calzado",
+    "date": "2024-03-26T01:21:38.090Z"
+  },
+  {
+    "id": "62d45b9910ad03e0e19255d2",
+    "title": "pollera",
+    "category": "indumentaria",
+    "date": "2024-03-26T01:34:13.675Z"
+  },
+  {
+    "id": "129ab38ab8ff527cb1192b54",
+    "title": "pollera",
+    "category": "indumentaria",
+    "date": "2024-03-26T01:36:24.496Z"
+  },
+  {
+    "id": "602252309b5cc9d89e7d2b28",
+    "title": "pollera",
+    "category": "indumentaria",
+    "date": "2024-03-26T01:37:08.060Z"
+  },
+  {
+    "id": "446323566a1f6c8a08665aee",
+    "title": "pulcera",
+    "category": "accesorios",
+    "date": "2024-03-26T01:38:47.356Z"
+  },
+  {
+    "id": "20530723550ed2d741957e31",
+    "title": "pulcera",
+    "category": "accesorios",
+    "date": "2024-03-26T02:13:33.248Z"
+  }
+]
