@@ -1,9 +1,9 @@
-const fs = require("fs");
-const crypto = require("crypto");
+import fs from "fs";
+import crypto from "crypto";
 
 class UserManager {
   constructor() {
-    this.path = "./fs/files/users.json";
+    this.path = "./data/fs/files/users.json";
     this.init();
   }
   init() {
@@ -26,7 +26,7 @@ class UserManager {
           "https://static.vecteezy.com/system/resources/previews/007/409/979/non_2x/people-icon-design-avatar-icon-person-icons-people-icons-are-set-in-trendy-flat-style-user-icon-set-vector.jpg",
         email: data.email,
         password: data.password,
-        role: data.role,
+        role: data.role || "0",
       };
       if (!data.email || !data.password || !data.role) {
         console.log("Usuario no creado. Ingrese todos los datos.");
@@ -42,7 +42,7 @@ class UserManager {
       console.log(error);
     }
   }
-  async read() {
+  async read(rol = "0") {
     try {
       let users = await fs.promises.readFile(this.path, "utf-8");
       users = JSON.parse(users);
@@ -51,7 +51,9 @@ class UserManager {
       } else {
         return users;
       }
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   async readOne(id) {
@@ -61,8 +63,9 @@ class UserManager {
       const user = users.find((each) => each.id === id);
       if (!user) {
         throw new Error("Usuario inexistente");
+      } else {
+        return user;
       }
-      return user;
     } catch (error) {
       console.log(error);
     }
@@ -80,34 +83,57 @@ class UserManager {
   }
 }
 
-async function test() {
-  const gestorDeUsuarios = new UserManager();
-  await gestorDeUsuarios.create({
+async function testCreate() {
+  const usersManager = new UserManager();
+  await usersManager.create({
     photo: "eve.jpg",
     email: "eve@gmail.com",
     password: "jojo1234",
     role: "administrador",
   });
-  await gestorDeUsuarios.create({
+  await usersManager.create({
     photo: "nico.jpg",
     email: "nicoe@gmail.com",
     password: "jeje4321",
     role: "usuario",
   });
-  await gestorDeUsuarios.create({
+  await usersManager.create({
     photo: "martina.jpg",
     email: "martina@gmail.com",
     password: "jiji1234",
     role: "usuario",
   });
-  await gestorDeUsuarios.create({
+  await usersManager.create({
     photo: "javier.jpg",
     email: "javier@gmail.com",
     password: "jaja4321",
     role: "usuario",
   });
-  console.log(await gestorDeUsuarios.read());
-  console.log(await gestorDeUsuarios.readOne("8520ee57ebbf5b91d53ac99d"));
+  console.log(await usersManager.read());
 }
 
-test();
+async function testRead() {
+  const usersManager = new UserManager();
+  await usersManager.read();
+  console.log(await usersManager.read());
+}
+
+async function testReadOne() {
+  const usersManager = new UserManager();
+  await usersManager.readOne("");
+  console.log(await usersManager.readOne());
+}
+
+async function testDestroy() {
+  const usersManager = new UserManager();
+  await usersManager.destroy("");
+  console.log(await usersManager.readOne());
+}
+
+testCreate();
+testRead();
+testReadOne();
+testDestroy();
+
+const usersManager = new UserManager();
+export default usersManager;

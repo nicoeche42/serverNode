@@ -50,7 +50,7 @@ class UserManager {
   }
   destroy(id) {
     try {
-      const filtered = UsersManager.#users.filter((each) => each.id !== id);
+      const filtered = UserManager.#users.filter((each) => each.id !== id);
       if (!id) {
         throw new Error("Id de usuario inexistente");
       } else {
@@ -63,30 +63,31 @@ class UserManager {
   }
 }
 
-const gestorDeUsuarios = new UserManager();
+const usersManager = new UserManager();
 
-gestorDeUsuarios.create({
+usersManager.create({
   photo: "eve.jpg",
   email: "eve@gmail.com",
   password: "jojo1234",
   role: "administrador",
 });
-gestorDeUsuarios.create({
+usersManager.create({
   photo: "nico.jpg",
   email: "nicoe@gmail.com",
   password: "jeje4321",
   role: "usuario",
 });
-gestorDeUsuarios.create({
+usersManager.create({
   photo: "martina.jpg",
   email: "martina@gmail.com",
   password: "jiji1234",
   role: "usuario",
 });
-gestorDeUsuarios.create({
+usersManager.create({
   photo: "javier.jpg",
   email: "javier@gmail.com",
   password: "jaja4321",
   role: "usuario",
 });
-console.log(gestorDeUsuarios.read());
+
+console.log(usersManager.read());

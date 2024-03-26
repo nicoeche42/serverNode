@@ -65,76 +65,146 @@ class ProductManager {
   }
 }
 
-const gestorDeProductos = new ProductManager();
-gestorDeProductos.create({
+const productsManager = new ProductManager();
+productsManager.create({
   title: "remera",
   photo: "remera.jpg",
   category: "indumentaria",
   price: 50,
   stock: 200,
 });
-gestorDeProductos.create({
+productsManager.create({
   title: "zapatilla",
   photo: "zapatilla.jpg",
   category: "calzado",
   price: 300,
   stock: 50,
 });
-gestorDeProductos.create({
+productsManager.create({
   title: "buzo",
   photo: "buzo.jpg",
   category: "indumentaria",
   price: 200,
   stock: 100,
 });
-gestorDeProductos.create({
+productsManager.create({
   title: "zapato",
   photo: "zapato.jpg",
   category: "calzado",
   price: 250,
   stock: 20,
 });
-gestorDeProductos.create({
+productsManager.create({
   title: "pantalon",
   photo: "pantalon.jpg",
   category: "indumentaria",
   price: 150,
   stock: 40,
 });
-gestorDeProductos.create({
-    title: "camisa",
-    photo: "camisa.jpg",
-    category: "indumentaria",
-    price: 100,
-    stock: 100,
-  });
-  gestorDeProductos.create({
-    title: "ojotas",
-    photo: "ojotas.jpg",
-    category: "calzado",
-    price: 50,
-    stock: 200,
-  });
-  gestorDeProductos.create({
-    title: "gorra",
-    photo: "gorra.jpg",
-    category: "accesorios",
-    price: 20,
-    stock: 100,
-  });
-  gestorDeProductos.create({
-    title: "lentes",
-    photo: "lentes.jpg",
-    category: "accesorios",
-    price: 30,
-    stock: 80,
-  });
-  gestorDeProductos.create({
-    title: "medias",
-    photo: "medias.jpg",
-    category: "indumentaria",
-    price: 15,
-    stock: 40,
-  });
+productsManager.create({
+  title: "camisa",
+  photo: "camisa.jpg",
+  category: "indumentaria",
+  price: 100,
+  stock: 100,
+});
+productsManager.create({
+  title: "ojotas",
+  photo: "ojotas.jpg",
+  category: "calzado",
+  price: 50,
+  stock: 200,
+});
+productsManager.create({
+  title: "gorra",
+  photo: "gorra.jpg",
+  category: "accesorios",
+  price: 20,
+  stock: 100,
+});
+productsManager.create({
+  title: "lentes",
+  photo: "lentes.jpg",
+  category: "accesorios",
+  price: 30,
+  stock: 80,
+});
+productsManager.create({
+  title: "medias",
+  photo: "medias.jpg",
+  category: "indumentaria",
+  price: 15,
+  stock: 40,
+});
+productsManager.create({
+  title: "chomba",
+  photo: "chomba.jpg",
+  category: "indumentaria",
+  price: 150,
+  stock: 100,
+});
+productsManager.create({
+  title: "borcego",
+  photo: "borcego.jpg",
+  category: "calzado",
+  price: 200,
+  stock: 150,
+});
+productsManager.create({
+  title: "chaleco",
+  photo: "chaleco.jpg",
+  category: "indumentaria",
+  price: 300,
+  stock: 50,
+});
+productsManager.create({
+  title: "botas",
+  photo: "botas.jpg",
+  category: "calzado",
+  price: 350,
+  stock: 10,
+});
+productsManager.create({
+  title: "short",
+  photo: "short.jpg",
+  category: "indumentaria",
+  price: 100,
+  stock: 140,
+});
+productsManager.create({
+  title: "musculosa",
+  photo: "musculosa.jpg",
+  category: "indumentaria",
+  price: 120,
+  stock: 80,
+});
+productsManager.create({
+  title: "tacos",
+  photo: "tacos.jpg",
+  category: "calzado",
+  price: 170,
+  stock: 50,
+});
+productsManager.create({
+  title: "corbata",
+  photo: "corbata.jpg",
+  category: "accesorios",
+  price: 50,
+  stock: 100,
+});
+productsManager.create({
+  title: "pulcera",
+  photo: "pulcera.jpg",
+  category: "accesorios",
+  price: 30,
+  stock: 80,
+});
+productsManager.create({
+  title: "pollera",
+  photo: "pollera.jpg",
+  category: "indumentaria",
+  price: 50,
+  stock: 140,
+});
 
-console.log(gestorDeProductos.read());
+console.log(productsManager.read());

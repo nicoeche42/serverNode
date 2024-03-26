@@ -78,5 +78,29 @@
     "category": "indumentaria",
     "price": 15,
     "stock": 40
+  },
+  {
+    "id": "16a8da015e49a09633e3e792",
+    "title": "corbata",
+    "category": "accesorios",
+    "date": "2024-03-26T01:18:25.937Z"
+  },
+  {
+    "id": "7580973cd21a86ac54302492",
+    "title": "musculosa",
+    "category": "indumentaria",
+    "date": "2024-03-26T01:19:37.500Z"
+  },
+  {
+    "id": "fd61a13a6508406c6786c3d3",
+    "title": "gorra",
+    "category": "accesorios",
+    "date": "2024-03-26T01:19:38.092Z"
+  },
+  {
+    "id": "112a5d812d3fba0a9484dc93",
+    "title": "botas",
+    "category": "calzado",
+    "date": "2024-03-26T01:21:38.090Z"
   }
 ]
