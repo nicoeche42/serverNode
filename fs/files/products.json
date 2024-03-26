@@ -102,5 +102,35 @@
     "title": "botas",
     "category": "calzado",
     "date": "2024-03-26T01:21:38.090Z"
+  },
+  {
+    "id": "62d45b9910ad03e0e19255d2",
+    "title": "pollera",
+    "category": "indumentaria",
+    "date": "2024-03-26T01:34:13.675Z"
+  },
+  {
+    "id": "129ab38ab8ff527cb1192b54",
+    "title": "pollera",
+    "category": "indumentaria",
+    "date": "2024-03-26T01:36:24.496Z"
+  },
+  {
+    "id": "602252309b5cc9d89e7d2b28",
+    "title": "pollera",
+    "category": "indumentaria",
+    "date": "2024-03-26T01:37:08.060Z"
+  },
+  {
+    "id": "446323566a1f6c8a08665aee",
+    "title": "pulcera",
+    "category": "accesorios",
+    "date": "2024-03-26T01:38:47.356Z"
+  },
+  {
+    "id": "20530723550ed2d741957e31",
+    "title": "pulcera",
+    "category": "accesorios",
+    "date": "2024-03-26T02:13:33.248Z"
   }
 ]

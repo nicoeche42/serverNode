@@ -1,7 +1,7 @@
 //import
 import express from "express";
-import productsManager from "./data/fs/ProductsManager.fs.js";
-import usersManager from "./data/fs/UsersManager.fs.js";
+import productsManager from "./fs/ProductsManager.fs.js";
+import usersManager from "./fs/UsersManager.fs.js";
 
 //server
 const server = express();
@@ -83,7 +83,7 @@ server.get("/api/users", async (req, res) => {
   try {
     const { role } = req.query;
     const all = await usersManager.read(role);
-    if (all) {
+    if (all.length !==0) {
       return res.status(200).json({
         response: all,
         codeStatus: 200,
@@ -124,6 +124,7 @@ server.get("/api/products/:uid", async (req, res) => {
     console.log(error);
     return res.status(error.statusCode).json({
       response: error.message,
+      codeStatus: error.statusCode,
       success: false,
     });
   }

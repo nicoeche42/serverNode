@@ -3,7 +3,7 @@ import crypto from "crypto";
 
 class UserManager {
   constructor() {
-    this.path = "./data/fs/files/users.json";
+    this.path = "./fs/files/users.json";
     this.init();
   }
   init() {
@@ -28,21 +28,18 @@ class UserManager {
         password: data.password,
         role: data.role || "0",
       };
-      if (!data.email || !data.password || !data.role) {
-        console.log("Usuario no creado. Ingrese todos los datos.");
-      } else {
-        let users = await fs.promises.readFile(this.path, "utf-8");
-        users = JSON.parse(users);
-        users.push(user);
-        console.log("usuario creado");
-        users = JSON.stringify(users, null, 2);
-        await fs.promises.writeFile(this.path, users);
-      }
+
+      let users = await fs.promises.readFile(this.path, "utf-8");
+      users = JSON.parse(users);
+      users.push(user);
+
+      await fs.promises.writeFile(this.path, JSON.stringify(users, null, 2));
+      console.log("Usuario creado");
     } catch (error) {
-      console.log(error);
+      console.log("Error al crear usuario:", error);
     }
   }
-  async read(rol = "0") {
+  async read(role = "0") {
     try {
       let users = await fs.promises.readFile(this.path, "utf-8");
       users = JSON.parse(users);
@@ -60,6 +57,10 @@ class UserManager {
     try {
       let users = await fs.promises.readFile(this.path, "utf-8");
       users = JSON.parse(users);
+      console.log(
+        "IDs de los usuarios:",
+        users.map((user) => user.id)
+      ); // Imprime los IDs de los usuarios
       const user = users.find((each) => each.id === id);
       if (!user) {
         throw new Error("Usuario inexistente");
@@ -75,8 +76,8 @@ class UserManager {
       let users = await fs.promises.readFile(this.path, "utf-8");
       users = JSON.parse(users);
       const filtered = users.filter((each) => each.id !== id);
-      await fs.promises.writeFile(filtered);
-      console.log(id + "eliminado");
+      await fs.promises.writeFile(this.path, JSON.stringify(filtered, null, 2)); // Corrección aquí
+      console.log(id + " eliminado");
     } catch (error) {
       console.log(error);
     }
@@ -120,20 +121,19 @@ async function testRead() {
 
 async function testReadOne() {
   const usersManager = new UserManager();
-  await usersManager.readOne("");
-  console.log(await usersManager.readOne());
+  await usersManager.readOne("2a1999332fc209ebc605e7d4");
 }
 
 async function testDestroy() {
   const usersManager = new UserManager();
-  await usersManager.destroy("");
+  await usersManager.destroy("100ccf0b1ce449568a624e6e");
   console.log(await usersManager.readOne());
 }
 
-testCreate();
-testRead();
-testReadOne();
-testDestroy();
+//testCreate();
+//testRead();
+//testReadOne();
+//testDestroy();
 
 const usersManager = new UserManager();
 export default usersManager;

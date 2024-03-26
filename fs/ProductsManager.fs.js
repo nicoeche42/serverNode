@@ -3,7 +3,7 @@ import crypto from "crypto";
 
 class ProductManager {
   constructor() {
-    this.path = "./data/fs/files/products.json";
+    this.path = "./fs/files/products.json";
     this.init();
   }
   init() {
@@ -243,17 +243,17 @@ async function testRead() {
 
 async function testReadOne() {
   const productsManager = new ProductManager();
-  await productsManager.readOne("");
+  await productsManager.readOne("20530723550ed2d741957e31");
   console.log(await productsManager.readOne());
 }
 
 async function testDestroy() {
   const productsManager = new ProductManager();
-  await productsManager.destroy("");
+  await productsManager.destroy("446323566a1f6c8a08665aee");
   console.log(await productsManager.destroy());
 }
 
-testCreate();
+//testCreate();
 //testRead();
 //testReadOne();
 //testDestroy();
